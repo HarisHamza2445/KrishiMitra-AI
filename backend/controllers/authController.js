@@ -49,14 +49,12 @@ exports.login = async (req, res) => {
         // Check if user exists (case-insensitive)
         const user = await User.findOne({ email: { $regex: new RegExp('^' + email.trim() + '$', 'i') } });
         if (!user) {
-            console.log(`Login failed: user not found for email '${email}'`);
             return res.status(400).json({ message: "Invalid Credentials" });
         }
 
         // Validate password
         const isMatch = await bcrypt.compare(password, user.password);
         if (!isMatch) {
-            console.log(`Login failed: password mismatch for email '${email}'`);
             return res.status(400).json({ message: "Invalid Credentials" });
         }
 

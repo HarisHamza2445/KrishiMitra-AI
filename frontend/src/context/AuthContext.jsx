@@ -10,10 +10,8 @@ export const AuthProvider = ({ children }) => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        // Check if user is logged in
         const token = localStorage.getItem('token');
         const userData = localStorage.getItem('user');
-
         if (token && userData) {
             setUser(JSON.parse(userData));
         }
@@ -38,8 +36,6 @@ export const AuthProvider = ({ children }) => {
     const register = async (userData) => {
         try {
             const res = await api.post('/auth/register', userData);
-            // Automatically login after register? Or redirect to login?
-            // For now, let's just return success
             return { success: true, message: res.data.message };
         } catch (error) {
             return {

@@ -36,8 +36,6 @@ const Register = () => {
             <div className="hidden lg:flex w-1/2 bg-slate-900 relative overflow-hidden items-center justify-center">
                 <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-40 mix-blend-overlay"></div>
                 <div className="absolute inset-0 bg-gradient-to-tr from-slate-900 via-slate-900/40 to-transparent"></div>
-
-                {/* Animated Orbs */}
                 <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-emerald-500/20 rounded-full blur-[100px] animate-pulse"></div>
 
                 <div className="relative z-10 max-w-lg px-12">
@@ -85,7 +83,6 @@ const Register = () => {
                     )}
 
                     <form onSubmit={handleSubmit} className="space-y-5">
-
                         <div className="grid grid-cols-2 gap-5">
                             <div>
                                 <label className="block text-sm font-semibold text-slate-700 mb-2">Name</label>
