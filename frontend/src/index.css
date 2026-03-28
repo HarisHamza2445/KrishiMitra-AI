@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#FAFAFA] text-slate-800 font-sans antialiased;
+    background-image: radial-gradient(rgba(16, 185, 129, 0.1) 1px, transparent 1px);
+    background-size: 24px 24px;
+    background-attachment: fixed;
+  }
+  ::selection {
+    @apply bg-primary-200 text-primary-900;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-200 rounded-full hover:bg-slate-300 transition-colors;
+}
+
+/* Premium Light Glass Utilities */
+.glass {
+  @apply bg-white/90 backdrop-blur-2xl border border-white/80 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.05)];
+}
+
+.glass-card {
+  @apply bg-white rounded-[2rem] border border-slate-100 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.05)];
+}
+
+.glass-hover {
+  @apply hover:shadow-[0_20px_40px_-15px_rgba(16,185,129,0.15)] hover:-translate-y-1 transition-all duration-500;
+}
+
+.text-gradient {
+  @apply bg-gradient-to-r from-primary-600 to-teal-500 bg-clip-text text-transparent;
+}
+
+/* Custom Animation Delays for Blob */
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
