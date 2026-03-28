@@ -110,9 +110,11 @@ const CropRecommendation = () => {
                                             onChange={(e) => setFormData({ ...formData, season: e.target.value })}
                                         >
                                             <option value="">Select Season</option>
-                                            <option value="Rabi">Rabi (Winter)</option>
-                                            <option value="Kharif">Kharif (Monsoon)</option>
-                                            <option value="Zaid">Zaid (Summer)</option>
+                                            <option value="Summer">Summer</option>
+                                            <option value="Winter">Winter</option>
+                                            <option value="Monsoon">Monsoon</option>
+                                            <option value="Autumn">Autumn</option>
+                                            <option value="Spring">Spring</option>
                                         </select>
                                     </div>
                                 </div>
