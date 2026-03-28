@@ -91,7 +91,7 @@ npm run dev --prefix frontend & npm run dev --prefix backend
 ---
 
 ## 👨‍💻 Developed By
-**Haris Hamza**  
+**Haris Hamza Ali**  
 Empowering agriculture through technology.
 
 ---
